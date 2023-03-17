@@ -1,4 +1,5 @@
-import React from 'react'
+//Components
+import SearchByTerm from '../filters/SearchByTerm'
 
 const Header = () => {
   return (
@@ -35,13 +36,7 @@ const Header = () => {
               </ul>
             </div>
             <div className="col-12">
-              <form className="d-flex w-100" role="search">
-                <div className="input-group mb-3">
-                  <input type="text" className="form-control rounded-0" placeholder="Recipient's username"
-                    aria-label="Recipient's username" aria-describedby="basic-addon2" />
-                  <span className="input-group-text" id="basic-addon2">@example.com</span>
-                </div>
-              </form>
+              <SearchByTerm />
             </div>
           </div>
         </div>

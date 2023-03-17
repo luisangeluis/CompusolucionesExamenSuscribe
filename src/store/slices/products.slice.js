@@ -6,28 +6,29 @@ const productsSlice = createSlice({
   initialState: products,
   reducers: {
     setProducts: (state, action) => action.payload,
-    
+
   }
 
 })
 
 export default productsSlice.reducer;
-export const { setProducts, setByMaker } = productsSlice.actions;
+export const { setProducts, } = productsSlice.actions;
 
 export const getByMaker = (maker) => (dispatch) => {
-  // console.log(maker);
   let result = [];
-  
-  if(maker==='') 
-    result = products
-  
-  else{
-    result = products.filter(product => {
-      return product.maker === maker;
-    })
-  }
-  console.log(result);
 
+  if (maker === '')
+    result = products
+  else
+    result = products.filter(product => product.maker === maker)
+
+  dispatch(setProducts(result));
+}
+
+export const getByTerm = (term) => (dispatch) => {
+  let result = [];
+
+  result = products.filter(product => product.maker.includes(term))
   dispatch(setProducts(result));
 }
 

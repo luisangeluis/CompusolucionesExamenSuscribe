@@ -1,11 +1,11 @@
 import React from 'react'
 import { useDispatch } from 'react-redux';
-import { getByMaker, setByMaker } from '../../store/slices/products.slice';
+import { getByMaker } from '../../store/slices/products.slice';
 
 const ManufacturersSelect = () => {
   const dispatch = useDispatch();
+  
   const handleChange = (e) => {
-    console.log(e.target.value)
     const value = e.target.value;
     dispatch(getByMaker(value));
   };
