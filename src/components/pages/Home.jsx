@@ -8,13 +8,7 @@ import CardProduct from '../products/CardProduct';
 
 const Home = () => {
   const products = useSelector(state => state.products);
-
-  useEffect(() => {
-
-  }, [])
-
-
-
+  
   console.log(products);
 
   return (

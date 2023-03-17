@@ -1,18 +1,27 @@
 import React from 'react'
+import { useDispatch } from 'react-redux';
+import { getByMaker, setByMaker } from '../../store/slices/products.slice';
 
 const ManufacturersSelect = () => {
-    return (
-        <>
-            <label htmlFor="manufacturers-select">Filtrar por</label>
-            <select className="form-select" id="manufacturers-select">
-                <option defaultValue=''>Todos los fabricantes</option>
-                <option value="1">One</option>
-                <option value="2">Two</option>
-                <option value="3">Three</option>
-            </select>
-        </>
+  const dispatch = useDispatch();
+  const handleChange = (e) => {
+    console.log(e.target.value)
+    const value = e.target.value;
+    dispatch(getByMaker(value));
+  };
 
-    )
+  return (
+    <>
+      <label htmlFor="manufacturers-select">Filtrar por</label>
+      <select className="form-select" id="manufacturers-select" onChange={handleChange}>
+        <option value=''>Todos los fabricantes</option>
+        <option value="microsoft">Microsoft</option>
+        <option value="autodesk">Autodesk</option>
+        <option value="vmware">VMWARE</option>
+      </select>
+    </>
+
+  )
 }
 
 export default ManufacturersSelect

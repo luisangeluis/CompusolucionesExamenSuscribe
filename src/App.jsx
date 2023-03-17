@@ -9,16 +9,13 @@ import MainLayout from './components/shared/MainLayout'
 import Home from './components/pages/Home'
 
 function App() {
-
   return (
     <div className="App">
       <Routes>
-        <Route path="/" element ={<MainLayout />}>
-          <Route index element={<Home/>}/>
+        <Route path="/" element={<MainLayout />}>
+          <Route index element={<Home />} />
         </Route>
       </Routes>
-
-      
     </div>
   )
 }
