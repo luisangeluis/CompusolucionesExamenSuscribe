@@ -7,7 +7,7 @@ const CardProduct = ({ product }) => {
     <article className='card py-2 py-md-3 border-0 border-top border-bottom rounded-0'>
       <div className="row">
         <div className="col-sm-3 text-center d-flex justify-content-center align-items-center">
-          <img src={`/assets/images/${product.imageUrl}`} alt={product.imageUrl} className="img-fluid w-75" />
+          <img src={`/src/assets/images/${product.imageUrl}`} alt={product.imageUrl} className="img-fluid w-75" />
         </div>
         <div className="col-sm-5">
           <div className="card-body">
