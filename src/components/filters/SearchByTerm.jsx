@@ -9,18 +9,13 @@ const SearchByTerm = () => {
   const inputTerm = useRef(null);
   const { register, handleSubmit, formState: { errors } } = useForm();
 
-  const handleClickSearch = (e) => {
-    e.preventDefault();
-    let value = inputTerm.current.value
-    value = value.trim();
+  const onSubmit = (data) => {
+    const value = data.term.trim();
 
     if (value.length) {
       dispatch(getByTerm(value));
-    } else console.log('sin valor');
-  }
+    }
 
-  const onSubmit = (data) => {
-    console.log(data);
   }
 
   return (
@@ -32,7 +27,8 @@ const SearchByTerm = () => {
 
       </div>
       {errors.term &&
-        <p role="alert" className="form-alert text-center bg-info position-absolute">
+        <p role="alert" className="form-alert text-center text-red fw-bold p-1 
+          position-absolute bg-secondary">
           {errors.term?.message}
         </p>
       }

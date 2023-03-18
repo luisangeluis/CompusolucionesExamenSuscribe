@@ -30,7 +30,7 @@ const CardProduct = ({ product }) => {
 
         </div>
         <div className="col-sm-4">
-          <ShoppingBox />
+          <ShoppingBox product={product} />
         </div>
       </div>
 

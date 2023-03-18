@@ -24,7 +24,7 @@ const Home = () => {
             </div>
             <div className="row">
               <div className="col">
-                Precios mas IVA
+                Precios mas IVA.
                 <hr className='fw-bold'/>
               </div>
             </div>
@@ -32,7 +32,12 @@ const Home = () => {
         </section>
         <section className="row">
           <div className="col-12">
-            {products?.map(product => <CardProduct product={product} key={product.id} />)}
+            {
+              products.length ?
+                products?.map(product => <CardProduct product={product} key={product.id} />)
+              :
+              <h2 className='title-1'>Sin resultados</h2>
+            }
           </div>
         </section>
       </div>
