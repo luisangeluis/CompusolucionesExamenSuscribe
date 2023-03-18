@@ -1,8 +1,9 @@
 import React from 'react'
 import ShoppingBox from './ShoppingBox'
 
-const CardProduct = ({ product }) => {
+import convertFirstToUpper from '../../utils/convertFirstToUpper';
 
+const CardProduct = ({ product }) => {
   return (
     <article className='card py-2 py-md-3 border-0 border-top border-bottom rounded-0'>
       <div className="row">
@@ -11,23 +12,22 @@ const CardProduct = ({ product }) => {
         </div>
         <div className="col-sm-5">
           <div className="card-body">
-            <h2 className=" title-1">{product.maker}</h2>
+            <h2 className=" title-1 mb-4">{convertFirstToUpper(product.maker)}</h2>
             <ul className='list-group'>
-              <li className='list-group-item border-0 p-0 mb-1'>
-                <span className='fw-bold'>Descripcion:</span> {product.maker}
+              <li className='list-group-item border-0 p-0 mb-2'>
+                <span className='fw-bold'>Descripcion:</span> {convertFirstToUpper(product.maker)}
               </li>
-              <li className='list-group-item border-0 p-0 mb-1'>
-                <span className='fw-bold'>Fabricante:</span> {product.maker}
+              <li className='list-group-item border-0 p-0 mb-2'>
+                <span className='fw-bold'>Fabricante:</span> {convertFirstToUpper(product.maker)}
               </li>
-              <li className='list-group-item border-0 p-0 mb-1'>
-                <span className='fw-bold'>Articulo Id:</span>{product.id}
+              <li className='list-group-item border-0 p-0 mb-2'>
+                <span className='fw-bold'>Articulo Id:</span> {product.id}
               </li>
-              <li className='list-group-item border-0 p-0 mb-1'>
-                <span className='fw-bold'>Precio:</span> {product.price}
+              <li className='list-group-item border-0 p-0 mb-2'>
+                <span className='fw-bold'>Precio:</span> ${Number(product.price).toFixed(2)}
               </li>
             </ul>
           </div>
-
         </div>
         <div className="col-sm-4">
           <ShoppingBox product={product} />

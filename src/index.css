@@ -75,6 +75,7 @@ input[type=number] { -moz-appearance:textfield; }
   width: 100%;
   top:0;
   left: 0;
+  z-index: 1;
 }
 .navbar-collapse{
   transition: all ease-in-out 500ms;
@@ -88,7 +89,7 @@ input[type=number] { -moz-appearance:textfield; }
 /********************FORM********************/
 .form-alert{
   margin-right: auto;
-  right: .2rem;
+  right: 0;
 }
 
 @media screen and (min-width:576px){

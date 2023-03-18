@@ -14,7 +14,8 @@ const ManufacturersSelect = () => {
     <>
       <label htmlFor="manufacturers-select">Filtrar por</label>
       <select className="form-select" id="manufacturers-select" onChange={handleChange}>
-        <option value=''>Todos los fabricantes</option>
+        <option value=''>Selecciona una opcion</option>
+        <option value='all'>Todos los fabricantes</option>
         <option value="microsoft">Microsoft</option>
         <option value="autodesk">Autodesk</option>
         <option value="vmware">VMWARE</option>
