@@ -25,10 +25,10 @@ const SearchByTerm = () => {
 
   return (
     <form className=" w-100" role="search" onSubmit={handleSubmit(onSubmit)}>
-      <div className="input-group">
+      <div className="input-group p-1 p-md-2 bg-blue-2">
         <input type="text" ref={inputTerm} id="term" className="form-control rounded-0"
           placeholder="Buscar producto" {...register("term", { required: "Ingresa el termino a buscar" })} />
-        <button className="btn">Buscar</button>
+        <button className="btn bg-blue-1 rounded-0 text-white">Buscar</button>
 
       </div>
       {errors.term &&

@@ -17,7 +17,7 @@ const Home = () => {
         <section className="row">
           <div className="col">
             <div className="row my-3 my-md-4">
-              <div className="col-md d-flex align-items-center">Suscripciones</div>
+              <div className="col-md d-flex align-items-center subtitle-1">Suscripciones</div>
               <div className="col-md">
                 <ManufacturersSelect />
               </div>
@@ -25,7 +25,7 @@ const Home = () => {
             <div className="row">
               <div className="col">
                 Precios mas IVA
-                <hr />
+                <hr className='fw-bold'/>
               </div>
             </div>
           </div>

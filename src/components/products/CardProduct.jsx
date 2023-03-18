@@ -11,7 +11,7 @@ const CardProduct = ({ product }) => {
         </div>
         <div className="col-sm-5">
           <div className="card-body">
-            <h2 className="card-title">{product.maker}</h2>
+            <h2 className=" title-1">{product.maker}</h2>
             <ul className='list-group'>
               <li className='list-group-item border-0 p-0 mb-1'>
                 <span className='fw-bold'>Descripcion:</span> {product.maker}
