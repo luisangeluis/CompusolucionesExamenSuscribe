@@ -48,6 +48,9 @@ input[type=number] { -moz-appearance:textfield; }
 .bg-red{
   background-color: #EA4335;
 }
+.bg-gray{
+  background-color: #80808060;
+}
 
 .title-1{
   font-size: 1.9rem;
