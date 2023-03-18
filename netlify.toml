@@ -1,5 +1,5 @@
 [[redirects]]
-  from = "/images/*"
-  to = "/img/:splat"
-  status = 200
-  force = true
+from = "/img/*"
+to = "/img/:splat"
+status = 200
+force = true
