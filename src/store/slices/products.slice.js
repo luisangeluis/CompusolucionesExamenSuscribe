@@ -16,7 +16,7 @@ export const { setProducts, } = productsSlice.actions;
 
 export const getByMaker = (maker) => (dispatch) => {
   let result = [];
-  console.log({maker});
+  // console.log({maker});
   if (maker === 'all')
     result = products
   else
