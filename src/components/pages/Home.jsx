@@ -8,8 +8,6 @@ import CardProduct from '../products/CardProduct';
 
 const Home = () => {
   const products = useSelector(state => state.products);
-  
-  console.log(products);
 
   return (
     <section className="home flex-grow-1">
@@ -25,7 +23,7 @@ const Home = () => {
             <div className="row">
               <div className="col">
                 Precios mas IVA.
-                <hr className='fw-bold'/>
+                <hr className='fw-bold' />
               </div>
             </div>
           </div>
@@ -35,8 +33,8 @@ const Home = () => {
             {
               products.length ?
                 products?.map(product => <CardProduct product={product} key={product.id} />)
-              :
-              <h2 className='title-1'>Sin resultados</h2>
+                :
+                <h2 className='title-1'>Sin resultados</h2>
             }
           </div>
         </section>
